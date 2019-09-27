@@ -22,7 +22,7 @@ public class ShopDaoManager {
     private static ShopDaoManager mInstance;
     private ShopDao mShopDao;
 
-    public ShopDaoManager getInstance() {
+    public static ShopDaoManager getInstance() {
         if (mInstance == null) {
             synchronized (ShopDaoManager.class) {
                 if (mInstance == null) {

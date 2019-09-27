@@ -1,28 +1,34 @@
 package com.iflytek.librarystudy.greendao;
 
+import android.support.annotation.NonNull;
+
 import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Keep;
 import org.greenrobot.greendao.annotation.NotNull;
 import org.greenrobot.greendao.annotation.Property;
 import org.greenrobot.greendao.annotation.Transient;
 import org.greenrobot.greendao.annotation.Unique;
 import org.greenrobot.greendao.annotation.Generated;
 
+import java.io.Serializable;
+
 /**
  * @author: cyli8
  * @date: 2019-09-26 17:28
  */
 
-/**
- * 告诉GreenDao该对象为实体，只有被@Entity注释的Bean类才能被dao类操作
- */
+// 告诉GreenDao该对象为实体，只有被@Entity注释的Bean类才能被dao类操作
 @Entity
-public class Shop {
+public class Shop implements Serializable {
+
+    private static final long serialVersionUID = 0L;
+
     /**
      * 对象的Id，使用Long类型作为EntityId，否则会报错。(autoincrement = true)表示主键会自增，如果false就会使用旧值
      */
     @Id(autoincrement = true)
-    private long id;
+    private Long id;
     @Unique
     private String name;
     /**
@@ -38,27 +44,29 @@ public class Shop {
      * 使用该注释的属性不会被存入数据库的字段中
      */
     @Transient
-    private int mylove;
+    private String mylove;
     private long createTime;
+    private boolean isFree;
 
-    @Generated(hash = 2040886176)
-    public Shop(long id, String name, String price, int type, long createTime) {
-        this.id = id;
+    @Keep
+    public Shop(String name, String price, int type) {
         this.name = name;
         this.price = price;
         this.type = type;
-        this.createTime = createTime;
+        this.createTime = System.currentTimeMillis();
     }
 
-    @Generated(hash = 633476670)
-    public Shop() {
+    @NonNull
+    @Override
+    public String toString() {
+        return id + " " + name + " " + price + " " + type + " " + createTime + " " + isFree;
     }
 
-    public long getId() {
+    public Long getId() {
         return this.id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -93,4 +101,29 @@ public class Shop {
     public void setCreateTime(long createTime) {
         this.createTime = createTime;
     }
+
+    public boolean getIsFree() {
+        return this.isFree;
+    }
+
+    public void setIsFree(boolean isFree) {
+        this.isFree = isFree;
+    }
+
+    @Generated(hash = 985467959)
+    public Shop(Long id, String name, String price, int type, long createTime,
+            boolean isFree) {
+        this.id = id;
+        this.name = name;
+        this.price = price;
+        this.type = type;
+        this.createTime = createTime;
+        this.isFree = isFree;
+    }
+
+    @Generated(hash = 633476670)
+    public Shop() {
+    }
+
+
 }

@@ -10,13 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".greendao.ShopListActivity"></activity>
+<!--        <activity android:name=".greendao.ShopListActivity"></activity>-->
         <!-- <activity android:name=".rxjava.operator.RxJavaCreateActivity"></activity> -->
         <!-- <activity android:name=".dagger2.dependencies.ChildActivity"></activity> -->
         <!-- <activity android:name=".dagger2.ParkActivity"></activity> -->
         <activity android:name=".jobscheduler.JobActivity" /> <!-- <activity android:name=".rxjava.use.IntervalActivity"></activity> -->
         <!-- <activity android:name=".rxjava.RxJavaCreateActivity"></activity> -->
-        <activity android:name=".rxjava.operator.RxJavaCreateActivity">
+        <activity android:name=".greendao.ShopListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
