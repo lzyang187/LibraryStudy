@@ -2,8 +2,9 @@ package com.iflytek.librarystudy.ui;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.facebook.fbui.textlayoutbuilder.TextLayoutBuilder;
 import com.iflytek.librarystudy.R;

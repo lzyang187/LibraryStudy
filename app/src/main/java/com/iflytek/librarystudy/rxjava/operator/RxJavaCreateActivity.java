@@ -1,8 +1,9 @@
 package com.iflytek.librarystudy.rxjava.operator;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.iflytek.librarystudy.R;
 

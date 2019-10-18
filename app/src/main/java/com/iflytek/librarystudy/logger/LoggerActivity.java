@@ -1,7 +1,8 @@
 package com.iflytek.librarystudy.logger;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.iflytek.librarystudy.R;
 import com.orhanobut.logger.Logger;

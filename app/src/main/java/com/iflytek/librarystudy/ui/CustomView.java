@@ -2,10 +2,11 @@ package com.iflytek.librarystudy.ui;
 
 import android.content.Context;
 import android.graphics.Canvas;
-import android.support.annotation.Nullable;
 import android.text.Layout;
 import android.util.AttributeSet;
 import android.view.View;
+
+import androidx.annotation.Nullable;
 
 /**
  * @author: cyli8

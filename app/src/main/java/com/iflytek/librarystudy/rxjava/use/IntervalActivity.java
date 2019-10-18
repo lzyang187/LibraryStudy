@@ -1,8 +1,9 @@
 package com.iflytek.librarystudy.rxjava.use;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.iflytek.librarystudy.R;
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
