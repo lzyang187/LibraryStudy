@@ -72,7 +72,22 @@ public class RxJavaCreateActivity extends AppCompatActivity {
 
         //4、通过订阅subscribe连接观察者和被观察者
         //表示观察者对被观察者发送的任何事件都作出响应
-        observable.subscribe(observer);
+//        observable.subscribe(new BaseObservable<Integer>() {
+//            @Override
+//            public void onNext(Integer integer) {
+//                super.onNext(integer);
+//                Log.e(TAG, "onNext: ");
+//            }
+//        });
+
+        BaseObservable<Integer> baseObservable = observable.subscribeWith(new BaseObservable<Integer>() {
+            @Override
+            public void onNext(Integer integer) {
+                super.onNext(integer);
+                Log.e(TAG, "onNext: " + integer);
+            }
+        });
+        baseObservable.onNext(3);
 
         List<Wrapper<Integer>> wrappers = new ArrayList<>();
         wrappers.add(new Wrapper<Integer>(1));
@@ -85,6 +100,7 @@ public class RxJavaCreateActivity extends AppCompatActivity {
 
             @Override
             public ObservableSource<String> apply(final Wrapper<Integer> integerWrapper) throws Exception {
+                Log.e(TAG, "apply: " + Thread.currentThread().getName());
                 int delay = 0;
                 if (integerWrapper.data == 2) {
                     delay = 500;
@@ -92,12 +108,12 @@ public class RxJavaCreateActivity extends AppCompatActivity {
                 return Observable.just(integerWrapper.data + "sss").delay(delay, TimeUnit.MICROSECONDS);
             }
         })
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                .compose(RxJavaUtil.rxScheduler(Schedulers.io()))
                 .subscribe(new Consumer<String>() {
                     @Override
                     public void accept(String s) throws Exception {
-                        System.out.println("flatMap = " + s);
+                        Log.e(TAG, "accept: " + Thread.currentThread().getName());
+                        Log.e(TAG, "accept: flatMap = " + s);
                     }
                 });
 

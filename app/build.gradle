@@ -44,7 +44,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation 'com.alibaba:fastjson:1.1.67.android'
     implementation 'com.facebook.fresco:fresco:1.9.0'
-    implementation 'com.facebook.fresco:animated-gif:1.9.0'
+//    implementation 'com.facebook.fresco:animated-gif:1.9.0'
     implementation 'com.blankj:utilcode:1.12.5'
     implementation 'com.orhanobut:logger:2.1.1'
     implementation 'com.facebook.fbui.textlayoutbuilder:textlayoutbuilder:1.4.0'
@@ -61,5 +61,8 @@ dependencies {
     // if you use the support libraries
     annotationProcessor 'com.google.dagger:dagger-android-processor:2.15'
     implementation 'org.greenrobot:greendao:3.2.2' // add library
+
+    implementation 'cn.wanghaomiao:JsoupXpath:2.3.2'
+    implementation 'com.belerweb:pinyin4j:2.5.0'
 
 }
