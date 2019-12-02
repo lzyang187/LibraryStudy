@@ -34,6 +34,7 @@ public class ShopListActivity extends AppCompatActivity implements View.OnClickL
                     type = Shop.TYPE_PHONE;
                 }
                 Shop shop = new Shop("shopName" + mCurIndex, "shopPrice" + mCurIndex, type);
+
                 ShopDaoManager.getInstance().insertOrReplace(shop);
                 mCurIndex++;
                 break;

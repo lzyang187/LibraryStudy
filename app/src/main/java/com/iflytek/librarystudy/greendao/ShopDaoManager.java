@@ -58,6 +58,14 @@ public class ShopDaoManager {
                 .list();
     }
 
+    public List<Shop> queryLike(String name) {
+        return mShopDao.queryBuilder()
+                //需要在前后加上%
+                .where(ShopDao.Properties.Name.like("%" + name + "%"))
+                .orderDesc(ShopDao.Properties.CreateTime)
+                .list();
+    }
+
     public List<Shop> loadAll() {
         return mShopDao.loadAll();
     }

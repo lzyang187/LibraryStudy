@@ -49,6 +49,8 @@ public class Shop implements Serializable {
     private long createTime;
     private boolean isFree;
 
+
+
     @Keep
     public Shop(String name, String price, int type) {
         this.name = name;

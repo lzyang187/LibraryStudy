@@ -3,6 +3,7 @@
     package="com.iflytek.librarystudy">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -13,15 +14,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".jsoup.JSoupActivity"></activity>-->
+<!--        <activity android:name=".glide.GlideTransformActivity"></activity>-->
+        <!-- <activity android:name=".glide.GlideActivity"></activity> -->
+        <!-- <activity android:name=".swipe.SwipeActivity"></activity> -->
+        <!-- <activity android:name=".dagger2.DaggerThirdLibActivity"></activity> -->
+        <!-- <activity android:name=".dagger2.Dagger2Activity"></activity> -->
+        <!-- <activity android:name=".smartrefresh.SmartRefreshActivity"></activity> -->
+        <!-- <activity android:name=".jsoup.JSoupActivity"></activity> -->
         <!-- <activity android:name=".greendao.ShopListActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.RxJavaCreateActivity"></activity> -->
         <!-- <activity android:name=".dagger2.dependencies.ChildActivity"></activity> -->
         <!-- <activity android:name=".dagger2.ParkActivity"></activity> -->
-        <activity android:name=".jobscheduler.JobActivity" />
+        <!-- <activity android:name=".jobscheduler.JobActivity" /> -->
         <!-- <activity android:name=".rxjava.use.IntervalActivity"></activity> -->
         <!-- <activity android:name=".rxjava.RxJavaCreateActivity"></activity> -->
-        <activity android:name=".jsoup.JSoupActivity">
+        <activity android:name=".glide.GlideActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

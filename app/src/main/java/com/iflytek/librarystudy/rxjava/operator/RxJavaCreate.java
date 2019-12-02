@@ -1,16 +1,12 @@
 package com.iflytek.librarystudy.rxjava.operator;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.ObservableSource;
-import io.reactivex.functions.Action;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
+import io.reactivex.Observer;
+import io.reactivex.disposables.Disposable;
 
 /**
  * @author: cyli8
@@ -51,31 +47,52 @@ public class RxJavaCreate {
 //                System.out.println("onComplete");
 //            }
 //        });
-        createObervable.subscribe(new Consumer() {
+//        createObervable.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object o) throws Exception {
+//                System.out.println("accept：" + o);
+//            }
+//        }, new Consumer<Throwable>() {
+//            @Override
+//            public void accept(Throwable throwable) throws Exception {
+//                System.out.println("accept onError：" + throwable.getMessage());
+//            }
+//        }, new Action() {
+//            @Override
+//            public void run() throws Exception {
+//                System.out.println("action：run");
+//            }
+//        });
+//
+//        Observable arrayObservable = Observable.fromArray(new String[]{"a", "b", "c"});
+//        arrayObservable.subscribe(new Consumer() {
+//            @Override
+//            public void accept(Object s) throws Exception {
+//                System.out.println("accept：" + s);
+//            }
+//        });
+
+        Observable.timer(1, TimeUnit.SECONDS).subscribe(new Observer<Long>() {
             @Override
-            public void accept(Object o) throws Exception {
-                System.out.println("accept：" + o);
+            public void onSubscribe(Disposable d) {
+
             }
-        }, new Consumer<Throwable>() {
+
             @Override
-            public void accept(Throwable throwable) throws Exception {
-                System.out.println("accept onError：" + throwable.getMessage());
+            public void onNext(Long aLong) {
+                System.out.println("timer onNext" + aLong);
             }
-        }, new Action() {
+
             @Override
-            public void run() throws Exception {
-                System.out.println("action：run");
+            public void onError(Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+                System.out.println("timer onComplete");
             }
         });
-
-        Observable arrayObservable = Observable.fromArray(new String[]{"a", "b", "c"});
-        arrayObservable.subscribe(new Consumer() {
-            @Override
-            public void accept(Object s) throws Exception {
-                System.out.println("accept：" + s);
-            }
-        });
-
 
     }
 

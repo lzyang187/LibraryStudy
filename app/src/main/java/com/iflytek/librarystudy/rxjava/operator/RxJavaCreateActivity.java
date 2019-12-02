@@ -374,12 +374,12 @@ public class RxJavaCreateActivity extends AppCompatActivity {
 //        /**
 //         * timer：创建一个在给定的延时之后
 //         */
-//        Disposable disposable3 = Observable.timer(1000, TimeUnit.MICROSECONDS).subscribe(new Consumer<Long>() {
-//            @Override
-//            public void accept(Long aLong) throws Exception {
-//                Log.d(TAG, "timer accept: " + aLong);
-//            }
-//        });
+        Disposable disposable3 = Observable.interval(3, TimeUnit.SECONDS).subscribe(new Consumer<Long>() {
+            @Override
+            public void accept(Long aLong) throws Exception {
+                Log.d(TAG, "timer accept: " + aLong);
+            }
+        });
 //
 //        Disposable disposable4 = Observable.defer(new Callable<ObservableSource<?>>() {
 //            @Override
