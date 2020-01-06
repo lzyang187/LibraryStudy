@@ -1,9 +1,10 @@
-package com.iflytek.librarystudy.rxjava.operator;
+package com.iflytek.librarystudy.rxjava.operator.condition;
+
+import com.iflytek.librarystudy.rxjava.operator.observer.BaseJavaObserver;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Consumer;
 import io.reactivex.functions.Predicate;
@@ -67,35 +68,11 @@ public class RxJavaCondition {
             }
         });
         //ambArray：给定多个Observable，只让第一个发射数据的Observable发射全部数据，其他Observable将会被忽略。
-        Observable.ambArray(observable, observable1).subscribe(get("ambArray"));
+        Observable.ambArray(observable, observable1).subscribe(new BaseJavaObserver<>("ambArray"));
 
         //switchIfEmpty：如果原始Observable正常终止后仍然没有发射任何数据，就使用备用的Observable。
-        Observable.empty().switchIfEmpty(Observable.just(1, 2)).subscribe(get("switchIfEmpty"));
-
+        Observable.empty().switchIfEmpty(Observable.just(1, 2)).subscribe(new BaseJavaObserver<>("switchIfEmpty"));
 
     }
 
-    public static <T> Observer<T> get(final String tag) {
-        return new Observer<T>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-
-            }
-
-            @Override
-            public void onNext(T t) {
-                System.out.println(tag + " " + t);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                System.out.println(tag + " " + e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        };
-    }
 }

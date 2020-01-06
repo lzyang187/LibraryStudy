@@ -22,6 +22,7 @@ import com.bumptech.glide.request.target.CustomTarget;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.transition.Transition;
 import com.iflytek.librarystudy.R;
+import com.iflytek.librarystudy.glide.module.GlideApp;
 import com.iflytek.librarystudy.glide.target.MyCustomLayout;
 
 import java.io.File;
@@ -88,10 +89,17 @@ public class GlideActivity extends AppCompatActivity {
         customTarget();
 
         //8、Generated API
-//        GlideApp.with(this)
-//                .load(url)
-//                .onlyCacheSource()
-//                .into(iv);
+        GlideApp.with(this)
+                .load(url)
+                .onlyCacheSource()
+                .into(iv);
+
+        //暂停请求，可用于列表快速滑动场景
+        Glide.with(this).pauseRequests();
+        //恢复请求
+        if (Glide.with(this).isPaused()) {
+            Glide.with(this).resumeRequests();
+        }
 
     }
 

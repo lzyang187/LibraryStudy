@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".gpuimage.GpuImageActivity">
+
+    <android.opengl.GLSurfaceView
+        android:id="@+id/gl_sv"
+        android:layout_width="329dp"
+        android:layout_height="185dp" />
+
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="329dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="20dp" />
+
+    <jp.co.cyberagent.android.gpuimage.GPUImageView
+        android:id="@+id/gpu_iv"
+        android:layout_width="329dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="20dp"
+        app:gpuimage_show_loading="true"
+        app:gpuimage_surface_type="texture_view" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>

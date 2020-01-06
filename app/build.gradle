@@ -80,4 +80,17 @@ dependencies {
     implementation 'com.github.bumptech.glide:okhttp3-integration:4.9.0'
     //变换库
     implementation 'jp.wasabeef:glide-transformations:4.0.0'
+    //RecyclerView集成库
+    implementation("com.github.bumptech.glide:recyclerview-integration:4.9.0") {
+        // Excludes the support library because it's already included by Glide.
+        transitive = false
+    }
+
+    implementation 'com.arialyy.aria:core:3.7.9'
+    annotationProcessor 'com.arialyy.aria:compiler:3.7.9'
+    // 如果需要使用ftp，请增加该组件
+//    implementation 'com.arialyy.aria:ftpComponent:3.7.9'
+    // 如果需要使用m3u8下载功能，请增加该组件
+//    implementation 'com.arialyy.aria:m3u8Component:3.7.9'
+    implementation 'jp.co.cyberagent.android:gpuimage:2.0.4'
 }

@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name=".MyApplication"
@@ -14,7 +15,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-<!--        <activity android:name=".glide.GlideTransformActivity"></activity>-->
+        <!-- <activity android:name=".gpuimage.GpuImageActivity"></activity>-->
+        <!-- <activity android:name=".rxjava.operator.concat.RxJavaConcatActivity"></activity> -->
+        <!-- <activity android:name=".rxjava.operator.map.RxJavaMapActivity"></activity> -->
+        <!-- <activity android:name=".rxjava.operator.filter.UseFilterActivity"></activity> -->
+        <!-- <activity android:name=".glide.recyclerview.GlideRecyclerViewActivity"></activity> -->
+        <!-- <activity android:name=".glide.GlideTransformActivity"></activity> -->
         <!-- <activity android:name=".glide.GlideActivity"></activity> -->
         <!-- <activity android:name=".swipe.SwipeActivity"></activity> -->
         <!-- <activity android:name=".dagger2.DaggerThirdLibActivity"></activity> -->
@@ -28,7 +34,7 @@
         <!-- <activity android:name=".jobscheduler.JobActivity" /> -->
         <!-- <activity android:name=".rxjava.use.IntervalActivity"></activity> -->
         <!-- <activity android:name=".rxjava.RxJavaCreateActivity"></activity> -->
-        <activity android:name=".glide.GlideActivity">
+        <activity android:name=".gpuimage.GpuImageActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
