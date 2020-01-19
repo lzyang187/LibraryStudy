@@ -15,7 +15,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- <activity android:name=".gpuimage.GpuImageActivity"></activity>-->
+        <activity android:name=".gpuimage.GpuImageListActivity"></activity>
+        <!-- <activity android:name=".gpuimage.GpuImageActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.concat.RxJavaConcatActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.map.RxJavaMapActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.filter.UseFilterActivity"></activity> -->
