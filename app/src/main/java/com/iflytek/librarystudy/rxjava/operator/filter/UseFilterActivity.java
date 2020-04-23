@@ -87,6 +87,7 @@ public class UseFilterActivity extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                Log.e(TAG, "发送输入框文本变化: " + s);
                 stringEmitter.onNext(s.toString());
             }
         });

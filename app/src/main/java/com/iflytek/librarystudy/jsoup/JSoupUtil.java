@@ -26,6 +26,7 @@ public class JSoupUtil {
                 Connection connect = Jsoup.connect(url);
                 Document document = connect.get();
                 emitter.onNext(document);
+                emitter.onComplete();
             }
         }).compose(RxJavaUtil.<Document>rxScheduler(Schedulers.io()));
     }
@@ -36,6 +37,7 @@ public class JSoupUtil {
             public void subscribe(ObservableEmitter<Document> emitter) throws Exception {
                 Document document = Jsoup.parse(file, "utf-8");
                 emitter.onNext(document);
+                emitter.onComplete();
             }
         }).compose(RxJavaUtil.<Document>rxScheduler(Schedulers.io()));
     }

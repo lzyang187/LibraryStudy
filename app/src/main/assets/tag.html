@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>网页的title</title>
+	</head>
+	<body>
+		<h1 style="background-color: red">这是一级标题</h1>
+		<h2 style="background-color: #00ff00">这是二级标题</h2>
+		<h3 style="font-size: 20px; color: red;">这是三级标题</h3>
+		<h4 style="text-align: center;">这是四级标题</h4>
+		<h5>这是五级标题</h5>
+		<h6>这是六级标题</h6>
+		<div style="color: #0000ff" class="btn">
+			<a onclick="log('哈哈哈')">这是按钮</a>
+		</div>
+		<hr/>
+		<p>这是段落1</p>
+		<hr/>
+		<p>这是段落2</p>
+		<p>这是<br/>段落3</p>
+		<a href="https://www.baidu.com" target="_self" title="打开百度哟">当前页面打开百度</a>
+		<a href="https://www.baidu.com" target="_blank">新页面打开百度</a>
+		<ol>
+			<li>有序条目1</li>
+			<li>有序条目2</li>
+		</ol>
+		<ul>
+			<li>无序条目1</li>
+			<li>无序条目2</li>
+		</ul>
+		<b>这是粗字体</b><br/>
+		<i>这是斜字体</i>
+		<p><abbr title="世界贸易组织">WTO</abbr>是一个很大的组织</p>
+		<article>
+			<h1>IE9</h1>
+			<p>IE9发布于2011年3月14日</p>
+		</article>
+		<p>这是一段<audio src="test.aac" controls="controls" loop="loop" muted="muted">音频</audio></p>
+		<button type="button">按钮</button>
+		<dl>
+			<dt>CPU</dt>
+			<dd>中央处理器</dd>
+			<dt>显示器</dt>
+			<dd>展示信息的设备</dd>
+		</dl>
+		<table border="1">
+			<tr>
+				<th>月份</th>
+				<th>收入</th>
+			</tr>
+			<tr>
+				<td>1月</td>
+				<td>300元</td>
+			</tr>
+		</table>
+		<p>一打有 <del>20</del> <ins>12</ins>件</p>
+		<input type="text" name="输入"><br/>
+
+        <img src="dog.gif" alt="狗"/><br/>
+		<video src="test.mp4" controls="controls" muted="muted">视频</video><br/>
+        <textarea id="inputtext" class="text"></textarea><br/>
+        <button onclick="log(document.getElementById('inputtext').value)">打印输入的内容</button>
+		<address>write by 李朝阳</address>
+        <script type="text/javascript">
+            function log(str) {
+                console.log(str);
+            }
+        </script>
+	</body>
+</html>

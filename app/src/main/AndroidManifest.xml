@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".gpuimage.GpuImageListActivity"></activity>
+        <!-- <activity android:name=".gpuimage.GpuImageListActivity"></activity>-->
         <!-- <activity android:name=".gpuimage.GpuImageActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.concat.RxJavaConcatActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.map.RxJavaMapActivity"></activity> -->
@@ -27,7 +27,7 @@
         <!-- <activity android:name=".dagger2.DaggerThirdLibActivity"></activity> -->
         <!-- <activity android:name=".dagger2.Dagger2Activity"></activity> -->
         <!-- <activity android:name=".smartrefresh.SmartRefreshActivity"></activity> -->
-        <!-- <activity android:name=".jsoup.JSoupActivity"></activity> -->
+        <!-- <activity android:name=".jsoup.JSoupActivity"></activity>-->
         <!-- <activity android:name=".greendao.ShopListActivity"></activity> -->
         <!-- <activity android:name=".rxjava.operator.RxJavaCreateActivity"></activity> -->
         <!-- <activity android:name=".dagger2.dependencies.ChildActivity"></activity> -->
@@ -35,7 +35,7 @@
         <!-- <activity android:name=".jobscheduler.JobActivity" /> -->
         <!-- <activity android:name=".rxjava.use.IntervalActivity"></activity> -->
         <!-- <activity android:name=".rxjava.RxJavaCreateActivity"></activity> -->
-        <activity android:name=".gpuimage.GpuImageActivity">
+        <activity android:name=".rxjava.operator.filter.UseFilterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

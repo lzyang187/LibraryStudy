@@ -14,6 +14,7 @@ import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
+import io.reactivex.functions.Consumer;
 
 public class RxJavaCreateActivity extends AppCompatActivity {
     private static final String TAG = "RxJavaCreateActivity";
@@ -29,10 +30,16 @@ public class RxJavaCreateActivity extends AppCompatActivity {
             public void subscribe(ObservableEmitter<String> emitter) throws Exception {
                 emitter.onNext("apple");
                 emitter.onNext("banana");
+                int a = 3 / 0;
                 emitter.onError(new IllegalArgumentException("抛出异常"));
                 emitter.onComplete();
             }
-        }).subscribe(new BaseAndroidObserver<String>("是否会崩溃"));
+        }).subscribe(new Consumer<String>() {
+            @Override
+            public void accept(String s) throws Exception {
+
+            }
+        });
 
         /**
          * interval操作符：发送事件的特点：每隔指定时间就发送事件
