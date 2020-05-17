@@ -10,6 +10,9 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            abiFilters 'armeabi-v7a'
+        }
     }
     buildTypes {
         release {
@@ -35,6 +38,10 @@ android {
         schemaVersion 110 //指定数据库schema版本号，迁移等操作会用到
         daoPackage 'com.lzy.greendao'//通过gradle插件生成的数据库相关文件路径，固定下来防止包名修改导致import错误
 //        targetGenDir 'src/main/java'//自定义生成数据库文件的目录了，可以将生成的文件放到我们的java目录中
+    }
+
+    compileOptions {
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
 }
@@ -93,4 +100,19 @@ dependencies {
     // 如果需要使用m3u8下载功能，请增加该组件
 //    implementation 'com.arialyy.aria:m3u8Component:3.7.9'
     implementation 'jp.co.cyberagent.android:gpuimage:2.0.4'
+
+    //EXO播放器
+    implementation 'com.google.android.exoplayer:exoplayer-core:2.11.4'
+    implementation 'com.google.android.exoplayer:exoplayer-dash:2.11.4'
+    implementation 'com.google.android.exoplayer:exoplayer-ui:2.11.4'
+//    implementation 'com.google.android.exoplayer:exoplayer-hls:2.11.4'
+//    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.11.4'
+
+    //ijkplayer
+    // required, enough for most devices.
+    implementation 'tv.danmaku.ijk.media:ijkplayer-java:0.8.8'
+    implementation 'tv.danmaku.ijk.media:ijkplayer-armv7a:0.8.8'
+    // ExoPlayer as IMediaPlayer: optional, experimental
+    implementation 'tv.danmaku.ijk.media:ijkplayer-exo:0.8.8'
+
 }
