@@ -15,7 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!-- <activity android:name=".ijkplayer.IjkExoPlayerActivity"></activity>-->
+<!--        <activity android:name=".xlog.XLogActivity"></activity>-->
+        <!-- <activity android:name=".mediaplayer.MediaPlayerActivity"></activity> -->
+        <!-- <activity android:name=".ijkplayer.IjkExoPlayerActivity"></activity> -->
         <!-- <activity android:name=".ijkplayer.IjkPlayerActivity"></activity> -->
         <!-- <activity android:name=".exoplayer.ExoPlayerActivity"></activity> -->
         <!-- <activity android:name=".gpuimage.GpuImageListActivity"></activity> -->
@@ -38,7 +40,7 @@
         <!-- <activity android:name=".jobscheduler.JobActivity" /> -->
         <!-- <activity android:name=".rxjava.use.IntervalActivity"></activity> -->
         <!-- <activity android:name=".rxjava.RxJavaCreateActivity"></activity> -->
-        <activity android:name=".ijkplayer.IjkExoPlayerActivity">
+        <activity android:name=".xlog.XLogActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />

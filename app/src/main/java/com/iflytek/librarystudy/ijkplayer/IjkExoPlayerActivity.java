@@ -12,6 +12,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iflytek.librarystudy.R;
+import com.iflytek.librarystudy.exoplayer.ExoPlayerActivity;
+
+import java.io.File;
 
 import tv.danmaku.ijk.media.exo.IjkExoMediaPlayer;
 import tv.danmaku.ijk.media.player.IMediaPlayer;

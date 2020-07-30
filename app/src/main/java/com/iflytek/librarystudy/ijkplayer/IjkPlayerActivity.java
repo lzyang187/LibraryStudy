@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.iflytek.librarystudy.R;
+import com.iflytek.librarystudy.exoplayer.ExoPlayerActivity;
 
 import java.io.IOException;
 
@@ -20,6 +21,7 @@ import tv.danmaku.ijk.media.player.IjkMediaPlayer;
 public class IjkPlayerActivity extends AppCompatActivity implements IMediaPlayer.OnPreparedListener, IMediaPlayer.OnCompletionListener, IMediaPlayer.OnErrorListener, IjkMediaPlayer.OnMediaCodecSelectListener, IMediaPlayer.OnVideoSizeChangedListener {
     private static final String TAG = "IjkPlayerActivity";
     public static final String VIDEO_PATH = "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319222227698228.mp4";
+    public static final String AUDIO_PATH = "http://vfx.mtime.cn/Video/2019/03/19/mp4/190319222227698228.mp4";
     private SurfaceView surfaceView;
     private IjkMediaPlayer ijkMediaPlayer;
 
@@ -45,7 +47,7 @@ public class IjkPlayerActivity extends AppCompatActivity implements IMediaPlayer
                 initPlayer();
                 ijkMediaPlayer.setDisplay(holder);
                 try {
-                    ijkMediaPlayer.setDataSource(VIDEO_PATH);
+                    ijkMediaPlayer.setDataSource(IjkPlayerActivity.this, ExoPlayerActivity.aacAudioUri);
                     ijkMediaPlayer.prepareAsync();
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -66,7 +68,7 @@ public class IjkPlayerActivity extends AppCompatActivity implements IMediaPlayer
 
     private void initPlayer() {
         ijkMediaPlayer = new IjkMediaPlayer();
-        ijkMediaPlayer.setLooping(true);
+        ijkMediaPlayer.setLooping(false);
         ijkMediaPlayer.setVolume(0.5f, 0.5f);
         ijkMediaPlayer.setOnPreparedListener(this);
         ijkMediaPlayer.setOnCompletionListener(this);
@@ -79,6 +81,8 @@ public class IjkPlayerActivity extends AppCompatActivity implements IMediaPlayer
         ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_CODEC, "mediacodec", 1);
         // 设置不自动播放（ijkPlayer默认准备就自动播放）
         ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "start-on-prepared", 0);
+        ijkMediaPlayer.setSpeed(1.5f);
+        ijkMediaPlayer.setOption(IjkMediaPlayer.OPT_CATEGORY_PLAYER, "soundtouch", 0);
     }
 
     @Override

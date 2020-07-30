@@ -50,7 +50,7 @@ public class ExoPlayerActivity extends AppCompatActivity {
     private Button pauseBtn;
     private PlayerView playerView;
     private Uri mp4VideoUri = Uri.parse("http://vfx.mtime.cn/Video/2019/03/19/mp4/190319222227698228.mp4");
-    private Uri aacAudioUri = Uri.parse("http://oss.kuyinyun.com/11W2MYCO/rescloud1/bccc7e01b7594907a55de3acf2259607.aac");
+    public static Uri aacAudioUri = Uri.parse("http://oss.kuyinyun.com/11W2MYCO/rescloud1/bccc7e01b7594907a55de3acf2259607.aac");
     private SimpleExoPlayer simpleExoPlayer;
 
     @Override
