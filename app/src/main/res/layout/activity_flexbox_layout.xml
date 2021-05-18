@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".flexbox.FlexboxLayoutActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:id="@+id/flexbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="推送和即时通讯" />
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="蓝牙" />
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="程序员" />
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="影视天堂" />
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="郭德纲" />
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="旅行——在路上" />
+
+            <TextView
+                style="@style/flexbox_text_style"
+                android:text="复仇者联盟4" />
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/flexbox" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
