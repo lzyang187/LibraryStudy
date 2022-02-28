@@ -15,34 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".lottie.LottieActivity"></activity>-->
-        <!-- <activity android:name=".flexbox.FlexboxLayoutActivity"></activity> -->
-        <!-- <activity android:name=".xlog.XLogActivity"></activity> -->
-        <!-- <activity android:name=".mediaplayer.MediaPlayerActivity"></activity> -->
-        <!-- <activity android:name=".ijkplayer.IjkExoPlayerActivity"></activity> -->
-        <!-- <activity android:name=".ijkplayer.IjkPlayerActivity"></activity> -->
-        <!-- <activity android:name=".exoplayer.ExoPlayerActivity"></activity> -->
-        <!-- <activity android:name=".gpuimage.GpuImageListActivity"></activity> -->
-        <!-- <activity android:name=".gpuimage.GpuImageActivity"></activity> -->
-        <!-- <activity android:name=".rxjava.operator.concat.RxJavaConcatActivity"></activity> -->
-        <!-- <activity android:name=".rxjava.operator.map.RxJavaMapActivity"></activity> -->
-        <!-- <activity android:name=".rxjava.operator.filter.UseFilterActivity"></activity> -->
-        <!-- <activity android:name=".glide.recyclerview.GlideRecyclerViewActivity"></activity> -->
-        <!-- <activity android:name=".glide.GlideTransformActivity"></activity> -->
-        <!-- <activity android:name=".glide.GlideActivity"></activity> -->
-        <!-- <activity android:name=".swipe.SwipeActivity"></activity> -->
-        <!-- <activity android:name=".dagger2.DaggerThirdLibActivity"></activity> -->
-        <!-- <activity android:name=".dagger2.Dagger2Activity"></activity> -->
-        <!-- <activity android:name=".smartrefresh.SmartRefreshActivity"></activity> -->
-        <!-- <activity android:name=".jsoup.JSoupActivity"></activity> -->
-        <!-- <activity android:name=".greendao.ShopListActivity"></activity> -->
-        <!-- <activity android:name=".rxjava.operator.RxJavaCreateActivity"></activity> -->
-        <!-- <activity android:name=".dagger2.dependencies.ChildActivity"></activity> -->
-        <!-- <activity android:name=".dagger2.ParkActivity"></activity> -->
-        <!-- <activity android:name=".jobscheduler.JobActivity" /> -->
-        <!-- <activity android:name=".rxjava.use.IntervalActivity"></activity> -->
-        <!-- <activity android:name=".rxjava.RxJavaCreateActivity"></activity> -->
-        <activity android:name=".lottie.LottieActivity">
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -50,6 +23,32 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".lottie.LottieActivity">
+
+        </activity>
+        <activity android:name=".flexbox.FlexboxLayoutActivity" />
+        <activity android:name=".xlog.XLogActivity" />
+        <activity android:name=".mediaplayer.MediaPlayerActivity" />
+        <activity android:name=".ijkplayer.IjkExoPlayerActivity" />
+        <activity android:name=".ijkplayer.IjkPlayerActivity" />
+        <activity android:name=".exoplayer.ExoPlayerActivity" />
+        <activity android:name=".gpuimage.GpuImageListActivity" />
+        <activity android:name=".gpuimage.GpuImageActivity" />
+        <activity android:name=".rxjava.operator.concat.RxJavaConcatActivity" />
+        <activity android:name=".rxjava.operator.map.RxJavaMapActivity" />
+        <activity android:name=".rxjava.operator.filter.UseFilterActivity" />
+        <activity android:name=".glide.recyclerview.GlideRecyclerViewActivity" />
+        <activity android:name=".glide.GlideTransformActivity" />
+        <activity android:name=".glide.GlideActivity" />
+        <activity android:name=".swipe.SwipeActivity" />
+        <activity android:name=".greendao.ShopListActivity" />
+        <activity android:name=".dagger2.thirdlib.DaggerThirdLibActivity" />
+        <activity android:name=".dagger2.Dagger2Activity" />
+        <activity android:name=".smartrefresh.SmartRefreshActivity" />
+        <activity android:name=".jsoup.JSoupActivity" />
+        <activity android:name=".rxjava.operator.create.RxJavaCreateActivity" />
+        <activity android:name=".jobscheduler.JobActivity" />
+        <activity android:name=".rxjava.use.IntervalActivity" />
 
         <service
             android:name=".jobscheduler.MyJobService"
