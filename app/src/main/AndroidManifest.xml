@@ -41,7 +41,6 @@
         <activity android:name=".glide.GlideTransformActivity" />
         <activity android:name=".glide.GlideActivity" />
         <activity android:name=".swipe.SwipeActivity" />
-        <activity android:name=".greendao.ShopListActivity" />
         <activity android:name=".dagger2.thirdlib.DaggerThirdLibActivity" />
         <activity android:name=".dagger2.Dagger2Activity" />
         <activity android:name=".smartrefresh.SmartRefreshActivity" />

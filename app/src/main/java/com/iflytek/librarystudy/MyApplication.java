@@ -1,10 +1,7 @@
 package com.iflytek.librarystudy;
 
 import android.app.Application;
-import android.database.sqlite.SQLiteDatabase;
 
-import com.lzy.greendao.DaoMaster;
-import com.lzy.greendao.DaoSession;
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.CsvFormatStrategy;
 import com.orhanobut.logger.DiskLogAdapter;
@@ -45,27 +42,6 @@ public class MyApplication extends Application {
             }
         });
 
-        setupDatabase();
-    }
-
-    private static DaoSession daoSession;
-
-    private void setupDatabase() {
-        //创建数据库shop.db"
-        //DevOpenHelper 创建SQLite数据库的SQLiteOpenHelper的具体实现
-        DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, "libraryStudy.db", null);
-        //获取可写数据库
-        SQLiteDatabase db = helper.getWritableDatabase();
-        //DaoMaster：GreenDao的顶级对象，作为数据库对象、用于创建表和删除表
-        //获取数据库对象
-        DaoMaster daoMaster = new DaoMaster(db);
-        //DaoSession：管理所有的Dao对象，Dao对象中存在着增删改查等API
-        //获取Dao对象管理者
-        daoSession = daoMaster.newSession();
-    }
-
-    public static DaoSession getDaoSession() {
-        return daoSession;
     }
 
 }
