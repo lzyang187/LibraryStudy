@@ -1,6 +1,7 @@
 package com.iflytek.librarystudy;
 
 import android.app.Application;
+import android.util.Log;
 
 import com.orhanobut.logger.AndroidLogAdapter;
 import com.orhanobut.logger.CsvFormatStrategy;
@@ -8,6 +9,7 @@ import com.orhanobut.logger.DiskLogAdapter;
 import com.orhanobut.logger.FormatStrategy;
 import com.orhanobut.logger.Logger;
 import com.orhanobut.logger.PrettyFormatStrategy;
+import com.tencent.mmkv.MMKV;
 
 /**
  * @author: cyli8
@@ -15,6 +17,8 @@ import com.orhanobut.logger.PrettyFormatStrategy;
  */
 
 public class MyApplication extends Application {
+    private static final String TAG = "MyApplication";
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -42,6 +46,8 @@ public class MyApplication extends Application {
             }
         });
 
+        String rootDir = MMKV.initialize(this);
+        Log.d(TAG, "mmkv root: " + rootDir);
     }
 
 }

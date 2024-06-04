@@ -142,4 +142,7 @@ dependencies {
     implementation 'com.googlecode.libphonenumber:libphonenumber:8.12.55'
     implementation 'com.googlecode.libphonenumber:geocoder:2.129'
 
+    // MMKV
+    implementation 'com.tencent:mmkv:1.2.8'
+
 }
