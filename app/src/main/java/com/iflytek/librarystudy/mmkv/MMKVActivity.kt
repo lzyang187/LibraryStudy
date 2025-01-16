@@ -2,7 +2,9 @@ package com.iflytek.librarystudy.mmkv
 
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
+import com.alibaba.android.arouter.launcher.ARouter
 import com.iflytek.librarystudy.R
 import com.tencent.mmkv.MMKV
 
@@ -29,7 +31,14 @@ class MMKVActivity : AppCompatActivity() {
         Log.d(TAG, "contains: $b1  $b2")
 
 
-
+        findViewById<Button>(R.id.btn_arouter).setOnClickListener {
+            // 1. 应用内简单的跳转(通过URL跳转在'进阶用法'中)
+            ARouter.getInstance().build("/test/activity")
+                .withLong("key1", 666L)
+                .withString("key3", "888")
+                .withObject("key4", Object())
+                .navigation();
+        }
     }
 
     private fun logValue(mmkv: MMKV?) {
