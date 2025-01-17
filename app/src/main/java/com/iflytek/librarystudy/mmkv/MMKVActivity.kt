@@ -36,7 +36,6 @@ class MMKVActivity : AppCompatActivity() {
             ARouter.getInstance().build("/test/activity")
                 .withLong("key1", 666L)
                 .withString("key3", "888")
-                .withObject("key4", Object())
                 .navigation();
         }
     }

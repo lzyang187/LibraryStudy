@@ -51,6 +51,7 @@
         <activity android:name=".rxjava.operator.create.RxJavaCreateActivity" />
         <activity android:name=".jobscheduler.JobActivity" />
         <activity android:name=".rxjava.use.IntervalActivity" />
+        <activity android:name=".arouter.RouterActivity" />
 
         <service
             android:name=".jobscheduler.MyJobService"
